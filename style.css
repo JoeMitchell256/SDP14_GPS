@@ -1,0 +1,45 @@
+body{
+  font-family: "Courier New", Courier;
+  background-image: url("background4.jpg");
+}
+
+#back{
+  background-color:white;
+  position:absolute;
+  z-index:1;
+}
+
+#myCanvas{
+  position:absolute;
+  z-index:1;
+}
+
+.container{
+  width:1000px; 
+  margin:auto;
+}
+
+.box-1{
+  background-color:#333;
+  color:#fff;
+}
+
+h1{
+  color:green; 
+}
+/* Scrollbar creation */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
