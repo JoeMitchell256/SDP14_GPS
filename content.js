@@ -16,12 +16,12 @@ function getInputValue(){
   ctx.font = "12px serif";
   
   ctx.fillText("Pulse Function: " + pulsefunction,20,20);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,40);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,60);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,80);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,100);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,120);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,140);
-  ctx.fillText("Pulse Function: " + pulsefunction,20,160);
+  ctx.fillText("N: " + n,20,40);
+  ctx.fillText("xMin: " + xMin,20,60);
+  ctx.fillText("xMax: " + xMax,20,80);
+  ctx.fillText("FourierWidth: " + FourierWidth,20,100);
+  ctx.fillText("FourierColor: " + FourierColor,20,120);
+  ctx.fillText("SquareColor: " + SquareColor,20,140);
+  ctx.fillText("SquareWidth: " + SquareWidth,20,160);
   
 }
