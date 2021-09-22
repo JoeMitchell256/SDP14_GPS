@@ -2,6 +2,34 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var n, pulsefunction, xMin, xMax, FourierWidth, FourierColor, SquareWidth, SquareColor;
 
+//The following variables are strictly set to define the canvas graph robustly
+var ycenter = 250;
+var ytop = 50;
+var yend = 450;
+
+var xstart = 100;
+var xend = 1300;
+//The above variables are for testing purposes for the moment as I draw the x-axis
+
+function drawXaxis(){
+  //Setup the canvas drawing parameters (These are extremely important!)
+  ctx.beginPath();
+  ctx.lineWidth = 1;
+  ctx.strokeStyle = '#000000';
+  ctx.font = "30px serif";
+  
+  ctx.fillText("n: " + n, 1000, 20); //Display value of n at the top right corner of page
+  ctx.stroke();
+}
+
+
+
+/**
+Function - getInputValue retrieves the input from the text boxes at the bottom of the website
+  These variables will no doubt need to be reformated later on and that will be mentioned in
+  a seperate comment
+*/
+
 function getInputValue(){
 
   pulsefunction = document.getElementById("pulse").value;
@@ -13,6 +41,7 @@ function getInputValue(){
   SquareWidth = document.getElementById("SquareWidth").value;
   SquareColor = document.getElementById("SquareColor").value;
 
+  /*
   ctx.font = "12px serif";
   
   ctx.fillText("Pulse Function: " + pulsefunction,20,20);
@@ -23,5 +52,9 @@ function getInputValue(){
   ctx.fillText("FourierColor: " + FourierColor,20,120);
   ctx.fillText("SquareColor: " + SquareColor,20,140);
   ctx.fillText("SquareWidth: " + SquareWidth,20,160);
-  
+  */
+  this.drawXaxis();
 }
+
+
+
