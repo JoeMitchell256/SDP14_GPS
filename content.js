@@ -17,7 +17,7 @@ Function clearCanvas - clear the content on the canvas
 */
 
 function clearCanvas(){
-  ctx.clearRect(0,0,c.width,c.height);
+  ctx.clearRect(0,0,1420,500);
   ctx.beginPath();
 }
 
