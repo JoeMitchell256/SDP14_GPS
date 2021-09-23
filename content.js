@@ -13,6 +13,16 @@ var xend = 1300;
 //The above variables are for testing purposes for the moment as I draw the x-axis
 
 /**
+Function clearCanvas - clear the content on the canvas
+*/
+
+function clearCanvas(){
+  ctx.clearRect(0,0,c.width,c.height);
+  ctx.beginPath();
+}
+
+
+/**
 Function drawYaxis - draw the y axis for the graph of the function
   All y axis content should reside in this seperate function
 */
@@ -88,6 +98,7 @@ function getInputValue(){
   
   this.drawXaxis();
   this.drawYaxis();
+  this.clearCanvas();
 }
 
 
