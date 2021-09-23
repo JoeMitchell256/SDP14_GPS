@@ -1,6 +1,7 @@
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var n, pulsefunction, xMin, xMax, FourierWidth, FourierColor, SquareWidth, SquareColor;
+var xpos = 0;
 
 //The following variables are strictly set to define the canvas graph robustly
 var ycenter = 250;
@@ -10,6 +11,19 @@ var yend = 450;
 var xstart = 100;
 var xend = 1300;
 //The above variables are for testing purposes for the moment as I draw the x-axis
+
+/**
+Function drawYaxis - draw the y axis for the graph of the function
+  All y axis content should reside in this seperate function
+*/
+
+function drawYaxis(){
+  ctx.moveTo(xpos,ytop);
+  ctx.lineTo(xpos,yend);
+  
+  ctx.stroke();
+}
+
 
 /**
 Function findXpos - find the proper position for the y-axis given the x limits
@@ -45,7 +59,7 @@ function drawXaxis(){
   
   ctx.fillText("n: " + n, 1000, 20); //Display value of n at the top right corner of page
   
-  var xpos = this.findXpos(xMin,xMax);
+  xpos = this.findXpos(xMin,xMax);
   
   ctx.fillText("xpos: " + xpos, 30, 20);
   
@@ -71,19 +85,9 @@ function getInputValue(){
   SquareWidth = document.getElementById("SquareWidth").value;
   SquareColor = document.getElementById("SquareColor").value;
 
-  /*
-  ctx.font = "12px serif";
   
-  ctx.fillText("Pulse Function: " + pulsefunction,20,20);
-  ctx.fillText("N: " + n,20,40);
-  ctx.fillText("xMin: " + xMin,20,60);
-  ctx.fillText("xMax: " + xMax,20,80);
-  ctx.fillText("FourierWidth: " + FourierWidth,20,100);
-  ctx.fillText("FourierColor: " + FourierColor,20,120);
-  ctx.fillText("SquareColor: " + SquareColor,20,140);
-  ctx.fillText("SquareWidth: " + SquareWidth,20,160);
-  */
   this.drawXaxis();
+  this.drawYaxis();
 }
 
 
