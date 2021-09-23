@@ -95,10 +95,9 @@ function getInputValue(){
   SquareWidth = document.getElementById("SquareWidth").value;
   SquareColor = document.getElementById("SquareColor").value;
 
-  
+  this.clearCanvas();
   this.drawXaxis();
   this.drawYaxis();
-  this.clearCanvas();
 }
 
 
