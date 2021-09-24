@@ -37,6 +37,7 @@ function findPulseInterval(){//No need for any parameters
   
   var pulses = pulsefunction.split(" ");
   var numPulses = pulses.length;
+  ctx.fillText("Number of pulses: " + numPulses, 700, 250); //Should display the proper pulse interval
   var onePulseInterval = onePI_Interval / numPulses;
   
   //Now we should have the proper pulse interval
