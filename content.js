@@ -33,6 +33,8 @@ function findPulseInterval(){//No need for any parameters
   var xRange = xend - xstart; //This is the total number of pixels along the x-axis
   var onePI_Interval = xRange / numPI_Intervals;
   
+  /*
+  
   //Now we should have the number of pixels for one PI interval
   
   var pulses = pulsefunction.split(" ");
@@ -42,7 +44,9 @@ function findPulseInterval(){//No need for any parameters
   
   //Now we should have the proper pulse interval
   
-  return onePulseInterval;
+  */
+  
+  return onePI_Interval;
 }
 
 /**
