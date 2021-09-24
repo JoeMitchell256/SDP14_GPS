@@ -46,7 +46,7 @@ function findPulseInterval(){//No need for any parameters
   
   
   
-  return onePI_Interval;
+  return onePulseInterval;
 }
 
 /**
