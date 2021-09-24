@@ -60,7 +60,7 @@ function drawYaxis(){
   
   var pulseInterval = this.findPulseInterval();
   
-  ctx.fillText("Pulse Interval: " + pulseInterval, 150, 100); //Should display the proper pulse interval
+  ctx.fillText("Pulse Interval: " + pulseInterval, 200, 200); //Should display the proper pulse interval
   
   ctx.stroke();
 }
