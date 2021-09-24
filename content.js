@@ -33,18 +33,18 @@ function findPulseInterval(){//No need for any parameters
   var xRange = xend - xstart; //This is the total number of pixels along the x-axis
   var onePI_Interval = xRange / numPI_Intervals;
   
-  /*
+  
   
   //Now we should have the number of pixels for one PI interval
   
   var pulses = pulsefunction.split(" ");
   var numPulses = pulses.length;
-  ctx.fillText("Number of pulses: " + numPulses, 700, 250); //Should display the proper pulse interval
+  //ctx.fillText("Number of pulses: " + numPulses, 700, 250); //Should display the proper pulse interval
   var onePulseInterval = onePI_Interval / numPulses;
   
   //Now we should have the proper pulse interval
   
-  */
+  
   
   return onePI_Interval;
 }
@@ -60,7 +60,7 @@ function drawYaxis(){
   
   var pulseInterval = this.findPulseInterval();
   
-  ctx.fillText("Pulse Interval: " + pulseInterval, 70, 25); //Should display the proper pulse interval
+  ctx.fillText("Pulse Interval: " + pulseInterval, 150, 100); //Should display the proper pulse interval
   
   ctx.stroke();
 }
