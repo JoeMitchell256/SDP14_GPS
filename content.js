@@ -60,7 +60,7 @@ function drawYaxis(){
   
   //Great! Now that we have the pulse interval, we can place all of the vertical gridlines for the graph!
   var i = xpos + pulseInterval;
-  while (i < xend) {//This should place all of the vertical gridlines
+  while (i <= xend) {//This should place all of the vertical gridlines
     ctx.moveTo(i,ytop);
     ctx.lineTo(i,yend);
     i += pulseInterval;
