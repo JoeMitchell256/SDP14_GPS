@@ -21,6 +21,28 @@ function clearCanvas(){
   ctx.beginPath();
 }
 
+/**
+Function findPulseInterval - Find the proper interval for the vertical gridlines
+*/
+
+function findPulseInterval(){//No need for any parameters
+  var xmin = parseInt(xMin);//These should be integer values
+  var xmax = parseInt(xMax);//Calibration will be needed later on
+  
+  var numPI_Intervals = xmax - xmin; //This should be the number of pi intervals
+  var xRange = xend - xstart; //This is the total number of pixels along the x-axis
+  var onePI_Interval = xRange / numPI_Intervals;
+  
+  //Now we should have the number of pixels for one PI interval
+  
+  var pulses = pulsefunction.split(" ");
+  var numPulses = pulses.length;
+  var onePulseInterval = onePI_Interval / numPulses;
+  
+  //Now we should have the proper pulse interval
+  
+  return onePulseInterval;
+}
 
 /**
 Function drawYaxis - draw the y axis for the graph of the function
@@ -30,6 +52,10 @@ Function drawYaxis - draw the y axis for the graph of the function
 function drawYaxis(){
   ctx.moveTo(xpos,ytop);
   ctx.lineTo(xpos,yend);
+  
+  var pulseInterval = this.findPulseInterval();
+  
+  ctx.fillText("Pulse Interval: " + pulseInterval, 700, 250); //Should display the proper pulse interval
   
   ctx.stroke();
 }
