@@ -65,7 +65,7 @@ function drawYaxis(){
     ctx.lineTo(i,yend);
     i += pulseInterval;
   }
-  
+  ctx.fillText("i:" + i, 300,300);
   ctx.stroke();
 }
 
