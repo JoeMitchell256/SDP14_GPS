@@ -33,8 +33,6 @@ function findPulseInterval(){//No need for any parameters
   var xRange = xend - xstart; //This is the total number of pixels along the x-axis
   var onePI_Interval = xRange / numPI_Intervals;
   
-  
-  
   //Now we should have the number of pixels for one PI interval
   
   var pulses = pulsefunction.split(" ");
@@ -43,8 +41,6 @@ function findPulseInterval(){//No need for any parameters
   var onePulseInterval = onePI_Interval / numPulses;
   
   //Now we should have the proper pulse interval
-  
-  
   
   return onePulseInterval;
 }
@@ -61,6 +57,13 @@ function drawYaxis(){
   var pulseInterval = this.findPulseInterval();
   
   ctx.fillText("Pulse Interval: " + pulseInterval, 200, 200); //Should display the proper pulse interval
+  
+  //Great! Now that we have the pulse interval, we can place all of the vertical gridlines for the graph!
+  var i = pulseInterval;
+  for (i; i < (xend - xstart); i += i) {//This should place all of the vertical gridlines
+    ctx.moveTo(xpos + i,ytop);
+    ctx.lineTo(xpos + i,yend);
+  }
   
   ctx.stroke();
 }
