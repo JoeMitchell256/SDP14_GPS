@@ -61,7 +61,7 @@ function drawYaxis(){
   ctx.fillText("Pulse Interval: " + pulseInterval, 200, 200); //Should display the proper pulse interval
   
   //Great! Now that we have the pulse interval, we can place all of the vertical gridlines for the graph!
-  var i = xpos + pulseInterval;
+  var i = xpos + pulseInterval + 0.5;//Need to "straddle" the pixels. https://stackoverflow.com/questions/8696631/canvas-drawings-like-lines-are-blurry
   while (i <= xend) {//This should place all of the vertical gridlines
     ctx.moveTo(i,ytop);
     ctx.lineTo(i,yend);
