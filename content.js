@@ -12,6 +12,8 @@ var xstart = 100;
 var xend = 1300;
 //The above variables are for testing purposes for the moment as I draw the x-axis
 
+
+
 /**
 Function clearCanvas - clear the content on the canvas
 */
@@ -106,6 +108,9 @@ function drawXaxis(){
   xpos = this.findXpos(xMin,xMax);
   
   ctx.fillText("xpos: " + xpos, 30, 20);
+  
+  ctx.moveTo(xstart-50,ycenter);
+  ctx.lineTo(xend,ycenter); 
   
   ctx.stroke();//This will draw all content on the context to the canvas
 }
