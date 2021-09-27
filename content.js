@@ -53,8 +53,8 @@ Function drawYaxis - draw the y axis for the graph of the function
 */
 
 function drawYaxis(){
-  ctx.moveTo(xpos,ytop);
-  ctx.lineTo(xpos,yend);
+  ctx.moveTo(xpos + 0.5,ytop);
+  ctx.lineTo(xpos + 0.5,yend);
   
   var pulseInterval = this.findPulseInterval();
   
