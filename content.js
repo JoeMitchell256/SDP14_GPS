@@ -78,6 +78,7 @@ Function drawYaxis - draw the y axis for the graph of the function
   All y axis content should reside in this seperate function
 */
 
+/*
 function drawYaxis(){
   ctx.moveTo(xpos + 0.5,ytop);
   ctx.lineTo(xpos + 0.5,yend);
@@ -100,7 +101,7 @@ function drawYaxis(){
   
   ctx.stroke();
 }
-
+*/
 
 /**
 Function findXpos - find the proper position for the y-axis given the x limits
