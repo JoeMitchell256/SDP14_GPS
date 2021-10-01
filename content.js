@@ -70,7 +70,7 @@ function drawYscale(){
     }
   }
   
-  //ctx.stroke();
+  ctx.stroke();
 }
 
 /**
@@ -96,7 +96,7 @@ function drawYaxis(){
     i += pulseInterval;
   }
   
-  this.drawYscale();
+  //this.drawYscale();
   
   ctx.stroke();
 }
