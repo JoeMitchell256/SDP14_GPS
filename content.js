@@ -48,6 +48,32 @@ function findPulseInterval(){//No need for any parameters
 }
 
 /**
+Function findYpos - find the proper y values for the y scale
+*/
+
+function drawYscale(){
+  var max = -Infinity;
+  var i = 0;
+  for(i = 0; i < pulsearray.length; i++){
+    if(Math.abs(parseInt(pulsearray[i])) > max){
+      max = Math.abs(parseInt(pulsearray[i])); //Determine the maximum y value in either the positive or negative direction
+    }
+  }
+  
+  // Determine the slope for the line that will be used to plot the y scale
+  var y = 0;
+  for(i = -max; i < max+1; i++){
+    if(i >= 0){//This shift should be modulated based on the x limits
+      ctx.fillText(i, xpos - 30, y);//Further shift the y scale off of the y axis for visibility
+    }else{
+      ctx.fillText(i, xpos - 50, y);//Further shift the y scale off of the y axis for visibility
+    }
+  }
+  
+  //ctx.stroke();
+}
+
+/**
 Function drawYaxis - draw the y axis for the graph of the function
   All y axis content should reside in this seperate function
 */
@@ -58,7 +84,9 @@ function drawYaxis(){
   
   var pulseInterval = this.findPulseInterval();
   
-  ctx.fillText("Pulse Interval: " + pulseInterval, 200, 200); //Should display the proper pulse interval
+  //Need to determine the y-axis positions for the pulse values. This code can be delibrately be pasted in here as a seperate function
+  
+  //ctx.fillText("Pulse Interval: " + pulseInterval, 200, 200); //Should display the proper pulse interval
   
   //Great! Now that we have the pulse interval, we can place all of the vertical gridlines for the graph!
   var i = xpos + pulseInterval + 0.5;//Need to "straddle" the pixels. https://stackoverflow.com/questions/8696631/canvas-drawings-like-lines-are-blurry
@@ -67,6 +95,9 @@ function drawYaxis(){
     ctx.lineTo(i,yend);
     i += pulseInterval;
   }
+  
+  this.drawYscale();
+  
   ctx.stroke();
 }
 
