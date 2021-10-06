@@ -50,7 +50,7 @@ function findPulseInterval(){//No need for any parameters
 /**
 Function findYpos - find the proper y values for the y scale
 */
-/*
+
 function drawYscale(){
   var max = -Infinity;
   var i = 0;
@@ -72,7 +72,7 @@ function drawYscale(){
   
   ctx.stroke();
 }
-*/
+
 /**
 Function drawYaxis - draw the y axis for the graph of the function
   All y axis content should reside in this seperate function
@@ -96,7 +96,7 @@ function drawYaxis(){
     i += pulseInterval;
   }
   
-  //this.drawYscale();
+  this.drawYscale();
   
   ctx.stroke();
 }
