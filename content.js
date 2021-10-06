@@ -61,6 +61,7 @@ function drawYscale(){
   }
   //ctx.fillText("Max: "+max,20,20);
   // Determine the slope for the line that will be used to plot the y scale
+  /*
   var y = 0;
   for(i = -max; i < max+1; i++){
     if(i >= 0){//This shift should be modulated based on the x limits
@@ -69,7 +70,7 @@ function drawYscale(){
       ctx.fillText(i, xpos - 50, y);//Further shift the y scale off of the y axis for visibility
     }
   }
-  
+  */
   ctx.stroke();
 }
 
