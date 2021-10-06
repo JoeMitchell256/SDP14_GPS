@@ -53,7 +53,7 @@ Function drawYscale - draw the y scale of the graph using the max and min values
 
 function drawYscale(){
   var max = Number.NEGATIVE_INFINITY;
-  /*
+  
   var i = 0;
   for(i = 0; i < pulsearray.length; i++){
     if(Math.abs(parseInt(pulsearray[i])) > max){
@@ -71,7 +71,7 @@ function drawYscale(){
       ctx.fillText(i, xpos - 50, y);//Further shift the y scale off of the y axis for visibility
     }
   }
-  */
+  
   ctx.stroke();
 }
 
