@@ -52,7 +52,7 @@ Function drawYscale - draw the y scale of the graph using the max and min values
 */
 
 function drawYscale(){
-  var max = -Infinity;
+  var max = -Math.Infinity;
   /*
   var i = 0;
   for(i = 0; i < pulsearray.length; i++){
