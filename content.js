@@ -60,7 +60,7 @@ function drawYscale(){
       max = Math.abs(parseInt(pulsearray[i])); //Determine the maximum y value in either the positive or negative direction
     }
   }
-  ctx.fillText("Max: "+max,20,20);
+  ctx.fillText("Max: "+max,50,50);
   // Determine the slope for the line that will be used to plot the y scale
   
   var y = 0;
