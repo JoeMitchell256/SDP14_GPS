@@ -47,36 +47,6 @@ function findPulseInterval(){//No need for any parameters
   return onePulseInterval;
 }
 
-/*
-Function drawYscale - draw the y scale of the graph using the max and min values
-*/
-
-/*
-function drawYscale(){
-  var max = Number.NEGATIVE_INFINITY;
-  
-  var i = 0;
-  for(i = 0; i < pulsearray.length; i++){
-    if(Math.abs(parseInt(pulsearray[i])) > max){
-      max = Math.abs(parseInt(pulsearray[i])); //Determine the maximum y value in either the positive or negative direction
-    }
-  }
-  ctx.fillText("Max: "+max,50,50);
-  // Determine the slope for the line that will be used to plot the y scale
-  
-  var y = 0;
-  for(i = -max; i < max+1; i++){
-    if(i >= 0){//This shift should be modulated based on the x limits
-      ctx.fillText(i, xpos - 30, y);//Further shift the y scale off of the y axis for visibility
-    }else{
-      ctx.fillText(i, xpos - 50, y);//Further shift the y scale off of the y axis for visibility
-    }
-  }
-  
-  ctx.stroke();
-}
-*/
-
 
 /**
 Function drawYaxis - draw the y axis for the graph of the function
