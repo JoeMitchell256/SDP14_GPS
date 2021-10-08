@@ -51,6 +51,7 @@ function findPulseInterval(){//No need for any parameters
 Function drawYscale - draw the y scale of the graph using the max and min values
 */
 
+/*
 function drawYscale(){
   var max = Number.NEGATIVE_INFINITY;
   
@@ -74,6 +75,7 @@ function drawYscale(){
   
   ctx.stroke();
 }
+*/
 
 
 /**
