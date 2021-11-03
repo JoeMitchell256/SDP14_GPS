@@ -33,6 +33,6 @@ Function - getInputValue retrieves the gps positions from a state file!
 */
 
 function getInputValue(){
-  this.clearCanvas();//Invoke the clear canvas function
+  //this.clearCanvas();//Invoke the clear canvas function
   this.drawBounds();//Invoke the draw bounds function to clearly state the boundaries of the longitude/latitude values
 }
