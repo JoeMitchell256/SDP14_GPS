@@ -22,7 +22,6 @@ function drawBounds(){
   ctx.fillStyle="red"
   //ctx.font="italic bold 35pt Tahoma" Completely optional
   ctx.fillText("Lat:90",50,50); //This should be just fine...
-  ctx.stroke();
 }
 
 
