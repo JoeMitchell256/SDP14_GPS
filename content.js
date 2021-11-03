@@ -8,8 +8,21 @@ Function clearCanvas - clear the content on the canvas
 */
 
 function clearCanvas(){
-  ctx.clearRect(0,0,1000,500);
-  ctx.beginPath();
+  ctx.clearRect(0,0,1000,500);//Clear the canvas of content
+  ctx.beginPath();//Clear all text / characters from the canvas
+}
+
+/**
+Function drawBounds - clearly state the bounds for the longitude and latitude.
+  This will help the audience visualize the position of the gps signal.
+  Later the intent is to incorporate mapping and zooming capability (This will take several hours!)
+*/
+
+function drawBounds(){
+  ctx.fillStyle="red"
+  ctx.font="italic bold 35pt Times New Roman"
+  ctx.fillText("Lat:90",500,50);
+  ctx.stroke();
 }
 
 
@@ -20,6 +33,6 @@ Function - getInputValue retrieves the gps positions from a state file!
 */
 
 function getInputValue(){
-  this.clearCanvas();
-  
+  this.clearCanvas();//Invoke the clear canvas function
+  this.drawBounds();//Invoke the draw bounds function to clearly state the boundaries of the longitude/latitude values
 }
