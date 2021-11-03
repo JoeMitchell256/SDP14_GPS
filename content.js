@@ -21,7 +21,7 @@ Function drawBounds - clearly state the bounds for the longitude and latitude.
 function drawBounds(){
   ctx.fillStyle="red"
   ctx.font="italic bold 35pt Tahoma"
-  ctx.fillText("Lat:90",500,50);
+  ctx.fillText("Lat:90",50,500);
   ctx.stroke();
 }
 
