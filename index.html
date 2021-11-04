@@ -25,17 +25,50 @@
     
       //Draw a border around to seperate the gps coordinate positions
       ctx.fillStyle= "black";
+      //Longitude border
       ctx.moveTo(80,40);
       ctx.lineTo(80,460);
       
       ctx.moveTo(80,40);
       ctx.lineTo(940,40);
       
+      //Latitude border
       ctx.moveTo(80,460);
       ctx.lineTo(940,460);
       
       ctx.moveTo(940,40);
       ctx.lineTo(940,460);
+      
+      ctx.stroke();
+      
+      //Provide a test input for the latitude - longitude coordinates
+      // Lets test out the gps position: long:lat: (40, 0)
+      // These values will be collected from the state file
+      
+      var longitude = 40;
+      var latitude = 0;
+      
+      //We need to design another linear function to properly convert the points to place on the marker on the canvas
+      // Long_coordinate = from (40,460) -180 to +80   range = 460 - 40 = 420 points divided from -180 to +80  range = 260 points
+      // Lat_coordinate = from (80,940) -90 to 90    range = 940 - 80 = 860 points divided from -90 to +90 range = 180 points
+      
+      //We can floor the value of Latitude and Longitude, then plot the markers on the GPS using a rectange to mark the position
+      
+      //So for Latitude : 860 / 180 = 4.7 rounded down to 4
+      //So for Longitude : 420 / 260 = 1.6 round to 1.5
+      
+      //Normalize the input from the state file
+      
+      //To normalize the longitude : take input longitude and add 180 to it
+      //To normalize the latitude : take input latitude and add 90 to it
+      
+      //So for Latitude = 4 * (inputLat+90) + 40
+      //And for Longitude = 1.5 * (inputLong+180) + 80
+      
+      longitude = 1.5*(longitude + 180) + 80;
+      latitude = 4*(latitude + 90) + 40;
+      
+      ctx.rect(longitude,latitude,5,5);
       
       ctx.stroke();
       
