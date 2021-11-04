@@ -11,9 +11,20 @@
       var canvas = document.getElementById('myCanvas');
       var ctx = canvas.getContext('2d');
 
+      //This will place the latitude boundaries on the canvas
       ctx.fillStyle= "red";
       ctx.fillText("Lat:90",500,30);
+      
+      ctx.fillText("Lat:-90",500,470);
+      
+      //This will place the longitude boundaries on the canvas
+      ctx.fillStyle= "blue";
+      ctx.fillText("Long:-180",10,250);
+      
+      ctx.fillText("Long:+80",950,250);
     
+      
+      
     </script>
       
       
