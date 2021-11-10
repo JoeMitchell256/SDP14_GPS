@@ -3,9 +3,20 @@
   <head>
     <title>SDP Team 14 GPS Map for Mesh Network</title> <!-- Title of our website in browser -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <input type="file" id="inputfile">
+    <pre id="output"></pre>
     <canvas id="back" width="1000" height="500" style="border:1px solid #000000"></canvas>
     <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000"></canvas>
     <script> // src="content.js" type="text/javascript"
+      
+      const inputElement = document.getElementById('inputfile').addEventListener('change', function() {
+              
+            var fr=new FileReader();
+            fr.onload=function(){
+                document.getElementById('output')
+                        .textContent=fr.result;
+            }
+      }
       
       //This is a test to see if text can be printed onto the canvas in the html file...
       var canvas = document.getElementById('myCanvas');
