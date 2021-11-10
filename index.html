@@ -25,16 +25,16 @@
         var reader = new FileReader();
         reader.onload = function(progressEvent){    
           fileContentArray = this.result.split(/\r\n|\n/);
-          
+          for(var line = 0; line < fileContentArray.length-1; line++){
+            ctx.fillStyle("orange");
+            ctx.fillText(fileContentArray[line],500,60 + (30*line)); //Should display the file contents to the canvas upon file change!
+          }
         };
         reader.readAsText(file);
       };
       
       
-      for(var line = 0; line < fileContentArray.length-1; line++){
-        ctx.fillStyle("orange");
-        ctx.fillText(fileContentArray[line],500,60 + (30*line)); //Should display the file contents to the canvas upon file change!
-      }
+      
       
       //This will place the latitude boundaries on the canvas
       ctx.fillStyle= "red";
