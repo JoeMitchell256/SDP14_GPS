@@ -13,7 +13,10 @@
       //This is a test to see if text can be printed onto the canvas in the html file...
       var canvas = document.getElementById('myCanvas');
       var ctx = canvas.getContext('2d');
-
+      
+      var fileContentArray;
+      var line;
+      
       const inputElement = document.getElementById('inputfile');
       
       //Try retrieving the first line of the inputfile
@@ -21,15 +24,17 @@
         var file = this.files[0];
         var reader = new FileReader();
         reader.onload = function(progressEvent){    
-          var fileContentArray = this.result.split(/\r\n|\n/);
-          for(var line = 0; line < fileContentArray.length-1; line++){
-            ctx.fillStyle("orange");
-            ctx.fillText(fileContentArray[line],500,60 + (30*line)); //Should display the file contents to the canvas upon file change!
-          }
+          fileContentArray = this.result.split(/\r\n|\n/);
+          
         };
         reader.readAsText(file);
       };
       
+      
+      for(var line = 0; line < fileContentArray.length-1; line++){
+        ctx.fillStyle("orange");
+        ctx.fillText(fileContentArray[line],500,60 + (30*line)); //Should display the file contents to the canvas upon file change!
+      }
       
       //This will place the latitude boundaries on the canvas
       ctx.fillStyle= "red";
