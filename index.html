@@ -3,7 +3,7 @@
   <head>
     <title>SDP Team 14 GPS Map for Mesh Network</title> <!-- Title of our website in browser -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <input type="file" id="inputfile">
+    <input type="file" name="inputfile" id="file" />
     <canvas id="back" width="1000" height="500" style="border:1px solid #000000"></canvas>
     <canvas id="myCanvas" width="1000" height="500" style="border:1px solid #000000"></canvas>
     <script> // src="content.js" type="text/javascript"
@@ -25,7 +25,6 @@
           for(var line = 0; line < fileContentArray.length-1; line++){
             ctx.fillStyle("orange");
             ctx.fillText(fileContentArray[line],500,60 + (30*line)); //Should display the file contents to the canvas upon file change!
-            //console.log(line + " --> "+ fileContentArray[line]);//This line doesn't do anything because we have no console!
           }
         };
         reader.readAsText(file);
